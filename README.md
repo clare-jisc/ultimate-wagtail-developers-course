@@ -26,14 +26,24 @@ Create a wagtail framework for your website app, with the name you want it to ha
   - now run `./manage.py migrate` to set up database for app `blog` with default wagtail settings
 - Note:
   - no `models.py` file exists in the `blog` app, it only exists in the default `home`, `search` apps
-  - the `settings` directory has all of the configuration for the `blog` app
+  - the `blog/settings` directory has all of the configuration for the `blog` app
 - create admin account for wagtail app `blog`
   - run `./manage.py createsuperuser`
-    - Username:
+    - Username: `admin`
     - Email: can leave blank
-    - Password:
-    - Password (again):
+    - Password: `PITA-changeme`
+    - Password (again): `PITA-changeme`
 - now check can login through wagtail UI interface
  - run `./manage.py runserver 0.0.0.:8003`
- - in browser go to `localhost:8003/admin` and login (admin, PITA-changeme)
+ - in browser go to `localhost:8003/admin` and login
+
+### List of useful wagtail imports
+
+from django.db import models
+lessons/link_to_lessons.md
+from wagtail.models import Page
+from wagtail.admin.panels import FieldPanel
+
+### Lessons summary
+click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-links-to-useful-lessons) file
 
