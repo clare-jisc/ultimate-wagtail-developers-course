@@ -46,6 +46,12 @@ Create a wagtail framework for your website app, with the name you want it to ha
 ### Lessons summary
 click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-links-to-useful-lessons) file
 
+### Links to useful documentation
+[Django documentation - builtin template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) 
+[Wagtail documentation - Jinja2 template tags support](https://docs.wagtail.org/en/stable/reference/jinja2.html#template-tags-functions-filters)
+
+
+
 ### List of useful wagtail imports
 
 from django.db import models
