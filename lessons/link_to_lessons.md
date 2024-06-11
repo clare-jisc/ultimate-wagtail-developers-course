@@ -1,13 +1,13 @@
 ## Quick links to useful lessons 
 return to [README.md](../README.md#learn-wagtail---ultimate-wagtail-developers-course)
 
- Lesson 4: [Introducing FieldPanels: The Key to Customisable Content](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/introducing-fieldpanels/) interactive fields you'll use to input and manage your content
+Lesson 4: [Introducing FieldPanels: The Key to Customisable Content](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/introducing-fieldpanels/) interactive fields you'll use to input and manage your content
 
- Lesson 5: [Page Templates: The Art of Structuring Your Wagtail Pages](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/structuring-page-templates/) give shape and structure to your Wagtail Pages, learn how to create a page template, how to access page information and move your templates around
+Lesson 5: [Page Templates: The Art of Structuring Your Wagtail Pages](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/structuring-page-templates/) give shape and structure to your Wagtail Pages, learn how to create a page template, how to access page information and move your templates around
 
- Lesson 6: [Custom ImageModel: Flex Your Wagtail Image Handling](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/custom-image-models/) apply best practice in using a Custom Image Model
+Lesson 6: [Custom ImageModel: Flex Your Wagtail Image Handling](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/custom-image-models/) apply best practice in using a Custom Image Model
 
- Lesson 7: [Using Images in Wagtail Templates](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/using-wagtail-images/) integrating images into your templates, set up an ImageField and link it via ForeignKey to Wagtail's Image object (or your Custom ImageModel)
+Lesson 7: [Using Images in Wagtail Templates](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/using-wagtail-images/) integrating images into your templates, set up an ImageField and link it via ForeignKey to Wagtail's Image object (or your Custom ImageModel)
 
 Lesson 8: [Efficient Image Loading in Wagtail](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/serving-dynamic-images/) generating image URLs without blocking the main template loading process. Learn how to serve images faster
 
@@ -24,6 +24,8 @@ Lesson 13: [Mastering Custom Page Validation in Wagtail CMS](https://learnwagtai
 Lesson 14: [Linking to Wagtail Pages with Validation and Custom Properties](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/linking-to-other-wagtail-pages/) interconnectivity, or, how to link one Wagtail page to another. Whether you're looking to set up a breadcrumb trail or link to deeper content
 
 Lesson 15: [How to Install a Release Candidate Version of Wagtail CMS](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/how-to-install-a-wagtail-release-candidate/) taking a look at installing a release candidate—a new version of Wagtail that's in the testing phases before being "officially" released
+
+
 
 
 [return to top](#quick-links-to-useful-lessons)

@@ -37,13 +37,21 @@ Create a wagtail framework for your website app, with the name you want it to ha
  - run `./manage.py runserver 0.0.0.:8003`
  - in browser go to `localhost:8003/admin` and login
 
-### List of useful wagtail imports
-
-from django.db import models
-lessons/link_to_lessons.md
-from wagtail.models import Page
-from wagtail.admin.panels import FieldPanel
+### Upgrade wagtail to latest version
+- inside virtual environment can run `pip install wagtail --upgrade`
+  - this uninstalls current version and installs newer version
+  - to install a specific version run `pip install wagtail==5.2`
+- update `requirements.txt` file to reflect new version
 
 ### Lessons summary
 click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-links-to-useful-lessons) file
+
+### List of useful wagtail imports
+
+from django.db import models
+
+from wagtail.models import Page
+from wagtail.admin.panels import FieldPanel
+
+
 
