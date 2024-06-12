@@ -4,14 +4,25 @@ from wagtail.models import Page
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel
 from wagtail.fields import RichTextField
 
+from wagtail.images import get_image_model
+
 class HomePage(Page):
     # set template location for page, not usually needed on model class as default from Page model
     # is needed on snippet models!!
     template = "home/home_page.html"
     # Add model fields here
+    info = models.TextField(blank=True)
     subtitle = models.CharField(max_length=100, blank=True, null=True) 
     body = RichTextField(blank=True)
-    info = models.TextField(blank=True)
+
+    # use invoked function to access both "images.CustomImage" model and "wagtailimages.Image" model 
+    image = models.ForeignKey(
+        get_image_model(),
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
 
     # Display model fields in admin UI
     # standard FieldPanel now covers all types of field eg RichTextField
@@ -25,4 +36,5 @@ class HomePage(Page):
         ),
         FieldPanel('subtitle'),
         FieldPanel('body'),
+        FieldPanel('image'),
     ]

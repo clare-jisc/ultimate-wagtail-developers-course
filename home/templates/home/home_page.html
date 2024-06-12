@@ -1,15 +1,42 @@
 {% extends "base.html" %}
-{% load static wagtailcore_tags %}
+{% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
 
     <h1>{{ page.title }}</h1>
-
-    <h3>{{ page.subtitle}}</h3>
+    <h2>{{ page.subtitle }}</h2>
 
     {% if page.body %}
         {% comment %} Add the body here, use templatetag {% endcomment %}
         {{ page.body|richtext }}
     {% endif %}
-    
+
+    <hr> Standard image serve as image object <hr>
+    {% comment %} add -c100 to end of fill attribute to render on focal point of image {% endcomment %}
+        {% image page.image fill-150x150-c100 format-jpeg %}
+
+        {% comment %} different image renditions below {% endcomment %}
+        {% image page.image width-400 %}
+        {% image page.image width-400 format-avif-lossless %}
+        {% image page.image width-400 format-webp-lossless %}
+
+        {% comment %} image template tag function returning an image object as a template variable {% endcomment %}
+        {% image page.image fill-200x200 as custom_img %}
+        <img src="{{ custom_img.url }}" alt="image">
+        {% comment %} <hr> access image attributes {% endcomment %}
+        {% comment %} <hr> {{ custom_img.url }} {% endcomment %}
+        {% comment %} <hr> width {{ custom_img.width }}  {% endcomment %}
+        {% comment %} <hr> height {{ custom_img.height }} {% endcomment %}
+
+        {% comment %} using dynamic image loading - GET request of string in url {% endcomment %}
+        <h3>Dynamic image serve view as string using image_url, use if page has lots of images/renditions</h3>
+        {% comment %} image_url template tage function using dynamic image loading - GET request in url {% endcomment %}
+        {% image_url page.image "fill-150x150|jpegquality-100" as custom_img2 %}
+        <hr> as url string: 
+        {{ custom_img2 }}
+        <hr> as template variable:  
+        <img src="{{ custom_img2 }}" alt="awesome-demo-also">
+        <hr> Or within img tag directly: 
+        <img src="{% image_url page.image "fill-150x150" %}" alt="awesome-demo">
+
 {% endblock content %}

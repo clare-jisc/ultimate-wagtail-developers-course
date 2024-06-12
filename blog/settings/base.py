@@ -185,3 +185,5 @@ WAGTAILDOCS_EXTENSIONS = ['csv', 'docx', 'key', 'odt', 'pdf', 'pptx', 'rtf', 'tx
 
 # Override the image model
 WAGTAILIMAGES_IMAGE_MODEL = "images.CustomImage"
+
+WAGTAILIMAGES_EXTENSIONS = ["jpeg", "jpg", "png", "gif", "svg", "webp"]
