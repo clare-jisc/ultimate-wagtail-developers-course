@@ -53,26 +53,21 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 - create `images` using `./manage.py startapp images`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
 
 ### Links to useful documentation
-[Django documentation - builtin template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) 
-[Wagtail documentation - Jinja2 template tags support](https://docs.wagtail.org/en/stable/reference/jinja2.html#template-tags-functions-filters)
-[Wagtail documentation - How to use images in templates](https://docs.wagtail.org/en/stable/topics/images.html#image-tag)
+- [Django documentation - builtin template tags and filters](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) 
+- [Wagtail documentation - Jinja2 template tags support](https://docs.wagtail.org/en/stable/reference/jinja2.html#template-tags-functions-filters)
+- [Wagtail documentation - How to use images in templates](https://docs.wagtail.org/en/stable/topics/images.html#image-tag)
 
 
 
 ### List of useful wagtail imports
 
-from django.db import models
-
-from wagtail.models import Page
-
-from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel 
-
-from wagtail.fields import RichTextField
-
-from wagtail.images.models import Image, AbstractImage, AbstractRendition (in `images/models.py`)
-from wagtail.images import get_image_model (a function() to use with `models.ForeignKey()` to get image instead of `"wagtailimages.Image"`)
-
-from wagtail.images.views.serve import ServeView (in `blog/urls.py`)
+- `from django.db import models`
+- `from wagtail.models import Page`
+- `from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel` 
+- `from wagtail.fields import RichTextField`
+- `from wagtail.images.models import Image, AbstractImage, AbstractRendition` (in `images/models.py`)
+- `from wagtail.images import get_image_model` (a function() to use with `models.ForeignKey()` to get image instead of `"wagtailimages.Image"`)
+- `from wagtail.images.views.serve import ServeView` (in `blog/urls.py`)
 
 
 
