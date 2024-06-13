@@ -2,25 +2,42 @@
 {% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block content %}
+    <header>
+        <h1 class="text-3xl">{{ page.title }}</h1>
+        <h2>{{ page.subtitle }}</h2>
+    </header>
 
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.subtitle }}</h2>
-
+    <div class="m-4 richtext"> 
     {% if page.body %}
         {% comment %} Add the body here, use templatetag {% endcomment %}
         {{ page.body|richtext }}
     {% endif %}
+    </div>
 
-    <hr> Standard image serve as image object <hr>
-    {% comment %} add -c100 to end of fill attribute to render on focal point of image {% endcomment %}
+    <div class="m-4">
+        {% comment %} <hr> Image serve as image object <hr> {% endcomment %}
+        {% comment %} <hr> image template tag function returning an image object as a template variable {% endcomment %}
+        {% image page.image fill-200x200 as custom_img %}
+
+        <hr class="p-1"> Standard image serve as image object <hr class="p-1" >
+        {% comment %} add -c100 to end of fill attribute to render on focal point of image {% endcomment %}
         {% image page.image fill-150x150-c100 format-jpeg %}
 
         {% comment %} different image renditions below {% endcomment %}
-        {% image page.image width-400 %}
-        {% image page.image width-400 format-avif-lossless %}
-        {% image page.image width-400 format-webp-lossless %}
+        <hr class="p-1" > Different image renditions <hr class="p-1" >
+        <div class="flex flex-wrap">
+            {% image page.image width-400 %}
+            {% image page.image width-400 format-avif-lossless %}
+            {% image page.image width-400 format-webp-lossless %}
+        </div>
+        {% comment %} <hr> access image attributes {% endcomment %}
+        {% comment %} <hr> {{ custom_img.url }} {% endcomment %}
+        {% comment %} <hr> width {{ custom_img.width }}  {% endcomment %}
+        {% comment %} <hr> height {{ custom_img.height }} {% endcomment %}
 
+        {% comment %} using dynamic image loading - GET request of string in url {% endcomment %}
         {% comment %} image template tag function returning an image object as a template variable {% endcomment %}
+        <hr class="p-1" > Image template tag serve as image object <hr class="p-1">
         {% image page.image fill-200x200 as custom_img %}
         <img src="{{ custom_img.url }}" alt="image">
         {% comment %} <hr> access image attributes {% endcomment %}
@@ -29,14 +46,15 @@
         {% comment %} <hr> height {{ custom_img.height }} {% endcomment %}
 
         {% comment %} using dynamic image loading - GET request of string in url {% endcomment %}
-        <h3>Dynamic image serve view as string using image_url, use if page has lots of images/renditions</h3>
+        <h3 class="p-1">Dynamic image serve view as string using image_url, use if page has lots of images/renditions</h3>
         {% comment %} image_url template tage function using dynamic image loading - GET request in url {% endcomment %}
         {% image_url page.image "fill-150x150|jpegquality-100" as custom_img2 %}
-        <hr> as url string: 
+        <hr class="p-1"> as url string: 
         {{ custom_img2 }}
-        <hr> as template variable:  
+        <hr class="p-1"> as template variable:  
         <img src="{{ custom_img2 }}" alt="awesome-demo-also">
-        <hr> Or within img tag directly: 
+        <hr class="p-1"  > Or within img tag directly: 
         <img src="{% image_url page.image "fill-150x150" %}" alt="awesome-demo">
+    </div>
 
 {% endblock content %}

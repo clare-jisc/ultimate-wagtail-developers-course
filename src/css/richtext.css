@@ -1,0 +1,4 @@
+.richtext {
+    @apply pt-3;
+    /* @apply font-sans text-xl font-light text-primary dark:text-white; */
+}
