@@ -5,6 +5,7 @@ from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel
 from wagtail.fields import RichTextField
 
 from wagtail.images import get_image_model
+from wagtail.documents import get_document_model
 
 class HomePage(Page):
     # set template location for page, not usually needed on model class as default from Page model
@@ -24,6 +25,14 @@ class HomePage(Page):
         related_name='+'
     )
 
+    custom_document = models.ForeignKey(
+        get_document_model(),
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
     # Display model fields in admin UI
     # standard FieldPanel now covers all types of field eg RichTextField
     content_panels = Page.content_panels + [
@@ -37,4 +46,5 @@ class HomePage(Page):
         FieldPanel('subtitle'),
         FieldPanel('body'),
         FieldPanel('image'),
+        FieldPanel('custom_document'),
     ]

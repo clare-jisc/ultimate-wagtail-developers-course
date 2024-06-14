@@ -3,33 +3,33 @@
 
 {% block content %}
     <header>
-        <h1 class="text-3xl">{{ page.title }}</h1>
-        <h2>{{ page.subtitle }}</h2>
+        <h1 class="text-3xl ">{{ page.title }}</h1>
+        <h2 class="text-lg">{{ page.subtitle }}</h2>
     </header>
 
     <div class="m-4 richtext"> 
-    {% if page.body %}
-        {% comment %} Add the body here, use templatetag {% endcomment %}
-        {{ page.body|richtext }}
-    {% endif %}
+        {% if page.body %}
+            {% comment %} Add the body here, use templatetag {% endcomment %}
+            {{ page.body|richtext }}
+        {% endif %}
     </div>
 
     <div class="m-4">
         {% comment %} <hr> Image serve as image object <hr> {% endcomment %}
         {% comment %} <hr> image template tag function returning an image object as a template variable {% endcomment %}
-        {% image page.image fill-200x200 as custom_img %}
+        {% comment %} {% image page.image fill-200x200 as custom_img %} {% endcomment %}
 
-        <hr class="p-1"> Standard image serve as image object <hr class="p-1" >
+        <hr class="pt-10 pb-1"> Standard image serve as image object
         {% comment %} add -c100 to end of fill attribute to render on focal point of image {% endcomment %}
         {% image page.image fill-150x150-c100 format-jpeg %}
 
         {% comment %} different image renditions below {% endcomment %}
-        <hr class="p-1" > Different image renditions <hr class="p-1" >
-        <div class="flex flex-wrap">
-            {% image page.image width-400 %}
-            {% image page.image width-400 format-avif-lossless %}
-            {% image page.image width-400 format-webp-lossless %}
-        </div>
+        {% comment %} <hr class="p-1" > Different image renditions <hr class="p-1" > {% endcomment %}
+        {% comment %} <div class="flex flex-wrap"> {% endcomment %}
+            {% comment %} {% image page.image width-400 %} {% endcomment %}
+            {% comment %} {% image page.image width-400 format-avif-lossless %} {% endcomment %}
+            {% comment %} {% image page.image width-400 format-webp-lossless %} {% endcomment %}
+        {% comment %} </div> {% endcomment %}
         {% comment %} <hr> access image attributes {% endcomment %}
         {% comment %} <hr> {{ custom_img.url }} {% endcomment %}
         {% comment %} <hr> width {{ custom_img.width }}  {% endcomment %}
@@ -37,9 +37,9 @@
 
         {% comment %} using dynamic image loading - GET request of string in url {% endcomment %}
         {% comment %} image template tag function returning an image object as a template variable {% endcomment %}
-        <hr class="p-1" > Image template tag serve as image object <hr class="p-1">
-        {% image page.image fill-200x200 as custom_img %}
-        <img src="{{ custom_img.url }}" alt="image">
+        {% comment %} <hr class="p-1" > Image template tag serve as image object <hr class="p-1"> {% endcomment %}
+        {% comment %} {% image page.image fill-200x200 as custom_img %} {% endcomment %}
+        {% comment %} <img src="{{ custom_img.url }}" alt="image"> {% endcomment %}
         {% comment %} <hr> access image attributes {% endcomment %}
         {% comment %} <hr> {{ custom_img.url }} {% endcomment %}
         {% comment %} <hr> width {{ custom_img.width }}  {% endcomment %}
@@ -48,13 +48,25 @@
         {% comment %} using dynamic image loading - GET request of string in url {% endcomment %}
         <h3 class="p-1">Dynamic image serve view as string using image_url, use if page has lots of images/renditions</h3>
         {% comment %} image_url template tage function using dynamic image loading - GET request in url {% endcomment %}
-        {% image_url page.image "fill-150x150|jpegquality-100" as custom_img2 %}
-        <hr class="p-1"> as url string: 
-        {{ custom_img2 }}
-        <hr class="p-1"> as template variable:  
-        <img src="{{ custom_img2 }}" alt="awesome-demo-also">
-        <hr class="p-1"  > Or within img tag directly: 
+        {% comment %} {% image_url page.image "fill-150x150|jpegquality-100" as custom_img2 %} {% endcomment %}
+        {% comment %} <hr class="p-1"> as url string:  {% endcomment %}
+        {% comment %} {{ custom_img2 }} {% endcomment %}
+        {% comment %} <hr class="p-1"> as template variable:   {% endcomment %}
+        {% comment %} <img src="{{ custom_img2 }}" alt="awesome-demo-also"> {% endcomment %}
+        {% comment %} <hr class="p-1"  > Or within img tag directly:  {% endcomment %}
         <img src="{% image_url page.image "fill-150x150" %}" alt="awesome-demo">
+    </div>
+
+    <div class="m-4">
+        <h3> Documents </h3>
+        {% if page.custom_document %}
+            <hr>THIS IS THE URL TO DISPLAY DOCUMENT IN BROWSER: {{ page.custom_document.url }}
+            <hr>AS A DOWNLOADABLE LINK: <a href="{{ page.custom_document.url }}" download><u>Download Me</u></a>
+            <hr>DOCUMENT TITLE:
+            {{ page.custom_document.title }}
+            <hr>DOCUMENT DESCRIPTION:
+            {{ page.custom_document.description }}
+        {% endif %}
     </div>
 
 {% endblock content %}
