@@ -9,7 +9,7 @@
 
     <div class="m-4 richtext"> 
         {% if page.body %}
-            {% comment %} Add the body here, use templatetag {% endcomment %}
+            {% comment %} Add the body field here, use templatetag richtext or safe to convert html from wagtail richtext block{% endcomment %}
             {{ page.body|richtext }}
         {% endif %}
     </div>
