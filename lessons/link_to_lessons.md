@@ -7,11 +7,11 @@ Lesson 5: [Page Templates: The Art of Structuring Your Wagtail Pages](https://le
 
 Lesson 6: [Custom ImageModel: Flex Your Wagtail Image Handling](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/custom-image-models/) apply best practice in using a Custom Image Model
 
-Lesson 7: [Using Images in Wagtail Templates](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/using-wagtail-images/) integrating images into your templates, set up an ImageField and link it via ForeignKey to Wagtail's Image object (or your Custom ImageModel), includes support for 'svg' and setting focal area on image upload
+Lesson 7: [Using Images in Wagtail Templates](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/using-wagtail-images/) integrating images into your templates, set up an ImageField and link it via ForeignKey to Wagtail's Image object (or your Custom Image Model), includes adding support for 'svg' and 'webp' image types and how to set a focal area on image
 
-Lesson 8: [Efficient Image Loading in Wagtail](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/serving-dynamic-images/) generating image URLs without blocking the main template loading process. Learn how to serve images faster using `dynamic image serve view`
+Lesson 8: [Efficient Image Loading in Wagtail](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/serving-dynamic-images/) generating image URLs without blocking the main template loading process. Learn how to serve multiple images faster using `dynamic image serve view`
 
-Lesson 9: [File Handling 101 (Wagtail Documents)](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/file-handling-101-wagtail-documents/) how to upload, manage or let your users download files from the template
+Lesson 9: [File Handling 101 (Wagtail Documents)](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/file-handling-101-wagtail-documents/) how to upload, manage or let your users download files from the template using a Custom Document Model
 
 Lesson 10: [Crafting Custom Pages in Wagtail CMS: A Step-by-Step Guide](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/your-first-custom-wagtail-page-and-tree-beard/) create a fully functional page with custom fields, migrations, and a template plus how to navigate the "Page Tree"
 
