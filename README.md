@@ -52,6 +52,8 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
   - default `search`
 - create `images` using `./manage.py startapp images`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
 - create `documents` using `./manage.py startapp documents`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
+- create `blogpages` using `./manage.py startapp blogpages`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
+
 
 
 ### Links to useful documentation

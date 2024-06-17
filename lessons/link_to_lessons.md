@@ -13,7 +13,7 @@ Lesson 8: [Efficient Image Loading in Wagtail](https://learnwagtail.com/courses/
 
 Lesson 9: [File Handling 101 (Wagtail Documents)](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/file-handling-101-wagtail-documents/) how to upload, manage or let your users download files from the template using a Custom Document Model
 
-Lesson 10: [Crafting Custom Pages in Wagtail CMS: A Step-by-Step Guide](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/your-first-custom-wagtail-page-and-tree-beard/) create a fully functional page with custom fields, migrations, and a template plus how to navigate the "Page Tree"
+Lesson 10: [Crafting Custom Pages in Wagtail CMS: A Step-by-Step Guide](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/your-first-custom-wagtail-page-and-tree-beard/) create a fully functional page and child with custom fields, migrations, and a template plus how to navigate the "Page Tree"
 
 Lesson 11: [Limiting Page Creation](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/limiting-page-creation/) limiting the number, location, and even the child pages of your custom Page types
 
