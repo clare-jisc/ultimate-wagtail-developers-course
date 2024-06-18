@@ -7,7 +7,7 @@
         <h2 class="text-lg">{{ page.subtitle }}</h2>
     </header>
 
-    <div class="m-4 richtext"> 
+    <div class="richtext m-4"> 
         {% if page.body %}
             {% comment %} Add the body field here, use templatetag richtext or safe to convert html from wagtail richtext block{% endcomment %}
             {{ page.body|richtext }}
