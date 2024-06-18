@@ -23,6 +23,13 @@ class BlogIndex(Page):
         FieldPanel("body"),
     ]
 
+    def get_context(self, request):
+        # Update context to include only published BlogDetail pages
+        context = super().get_context(request)
+        blogpages = BlogDetail.objects.live().public()
+        context["blogpages"] = blogpages
+        return context
+
 
 class BlogDetail(Page):
     # Blog detail page
