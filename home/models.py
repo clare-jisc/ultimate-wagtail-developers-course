@@ -10,13 +10,16 @@ from wagtail.documents import get_document_model
 class HomePage(Page):
     # set template location for page, not usually needed on model class as default from Page model
     # is needed on snippet models!!
-    template = "home/home_page.html"
+    template = "home/home_page.html" 
+    # number of home pages allowed
+    max_count = 1
+
     # Add model fields here
     info = models.TextField(blank=True)
     subtitle = models.CharField(max_length=100, blank=True, null=True) 
     body = RichTextField(blank=True)
 
-    # use invoked function to access both "images.CustomImage" model and "wagtailimages.Image" model 
+    # use invoked function to access both "images.CustomImage" model and "wagtailimages.Image" model
     image = models.ForeignKey(
         get_image_model(),
         null=True,
