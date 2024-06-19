@@ -66,6 +66,8 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 
 ### List of useful wagtail imports
 - `from django.db import models`
+- `from django.core.exceptions import ValidationError` 
+  - used to apply custom validation to fields on a page, set specific rules for content editor to abide by, supports SEO optimisation etc
 - `from wagtail.models import Page`
 - `from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel` 
 - `from wagtail.fields import RichTextField`
