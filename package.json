@@ -2,10 +2,13 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.4"
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/css/main.css -o ./blog/static/css/main.css --minify",
-    "watch": "npx tailwindcss -i ./src/css/main.css -o ./blog/static/css/main.css --watch --postcss"
+    "watch": "npx tailwindcss -i ./src/css/main.css -o ./blog/static/css/main.css --watch --postcss",
+    "check": "npx prettier --check ."
   }
 }

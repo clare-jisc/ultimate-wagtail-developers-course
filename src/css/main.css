@@ -1,8 +1,7 @@
 /* imports always at the top */
-@import 'header.css';
-@import 'richtext.css';
+@import "header.css";
+@import "richtext.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
