@@ -60,7 +60,14 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 - create `documents` using `./manage.py startapp documents`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
 - create `blogpages` using `./manage.py startapp blogpages`and activate it in `blog/settings/base.py` `INSTALLED_APPS` array
 
-- for Tailwind CSS create folder `src`
+- for Tailwind CSS create folder `src` and follow instructions in [Integrating Tailwind CSS with Wagtail](https://learnwagtail.com/courses/the-ultimate-wagtail-developers-course/adding-tailwind-css/)
+
+- for Code Formatting:
+  - to use Prettier follow instructions [Prettier - install](https://prettier.io/docs/en/install) 
+  - to include Tailwind plugin follow [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss/blob/main/README.md)
+  - modify it to [fix autoformatting of Django templates](https://gotofritz.net/blog/fixing-autoformatting-django-templates-in-visual-studio-code/)
+
+ - or follow [Wagtail admin UI guidelines](https://github.com/wagtail/wagtail/blob/54e108744bc8fa556ca2368f742f635874b5ad04/docs/contributing/ui_guidelines.md)
 
 ### Links to useful documentation
 
