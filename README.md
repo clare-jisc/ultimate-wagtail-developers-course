@@ -65,9 +65,15 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 - for Code Formatting:
   - to use Prettier follow instructions [Prettier - install](https://prettier.io/docs/en/install) 
   - to include Tailwind plugin follow [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss/blob/main/README.md)
-  - modify it to [fix autoformatting of Django templates](https://gotofritz.net/blog/fixing-autoformatting-django-templates-in-visual-studio-code/)
+  - modify it to [make VS Code format Django templates properly](https://stackoverflow.com/questions/42170561/how-to-make-vscode-format-django-templates-properly?answertab=modifieddesc#tab-top) ❓
 
- - or follow [Wagtail admin UI guidelines](https://github.com/wagtail/wagtail/blob/54e108744bc8fa556ca2368f742f635874b5ad04/docs/contributing/ui_guidelines.md)
+ - or follow [Wagtail admin UI guidelines](https://docs.wagtail.org/en/latest/contributing/ui_guidelines.html#html-guidelines) ❓
+
+ - or Code Linting & Formatting: ✅
+  - use [djLint](https://djlint.com/), which needs:
+    - pypi package install [djlint](https://pypi.org/project/djlint/)
+    - vs code extension [django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django) 
+    - vs code extension [djlint](https://marketplace.visualstudio.com/items?itemName=monosans.djlint)
 
 ### Links to useful documentation
 
