@@ -56,9 +56,21 @@
              alt="awesome-demo">
     </div>
     <div class="m-4">
-        <h3>Documents</h3>
+        {% comment %} {% if page.cta_url or page.cta_external_url %}
+        {% if page.cta_url %} {% endcomment %}
+            {% comment %} can access page object default fields .url and .title {% endcomment %}
+            {% comment %} <a href="{{ page.cta_url.url }}" class="text-blue-400 font-bold py-2 px-4 rounded">
+                    {{ page.cta_url.title }}
+                </a>
+            {% else %}
+                <a href="{{ page.cta_external_url }}" class="text-blue-400 font-bold py-2 px-4 rounded">
+                    SOME WEBSITE
+                </a>
+            {% endif %}
+            {% endif %} {% endcomment %}
+            {% if page.get_cta_url %}{{ page.get_cta_url }}{% endif %}
+            {% comment %} <h3>Documents</h3>
         {% if page.custom_document %}
-            <hr>
             THIS IS THE URL TO DISPLAY DOCUMENT IN BROWSER: {{ page.custom_document.url }}
             <hr>
             AS A DOWNLOADABLE LINK: <a href="{{ page.custom_document.url }}" download><u>Download Me</u></a>
@@ -68,6 +80,6 @@
             <hr>
             DOCUMENT DESCRIPTION:
             {{ page.custom_document.description }}
-        {% endif %}
-    </div>
-{% endblock content %}
+            {% endif %} {% endcomment %}
+        </div>
+    {% endblock content %}
