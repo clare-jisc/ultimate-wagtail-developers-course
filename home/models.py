@@ -59,12 +59,18 @@ class HomePage(Page):
             heading="Helpful Hints",
         ),
         FieldPanel('subtitle'),
-        FieldPanel('cta_url'),
-        FieldPanel('cta_external_url'),
+        MultiFieldPanel(
+            [
+                FieldPanel('cta_url'),
+                FieldPanel('cta_external_url'),
+            ],
+            heading="Call to Action",
+        ),
         FieldPanel('body'),
         FieldPanel('image'),
         FieldPanel('custom_document'),
-    ]
+        ]
+    
 
     # custom method to get the url of the cta link
     @property
