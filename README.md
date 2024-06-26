@@ -90,10 +90,12 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
   - used to apply custom validation to fields on a page, set specific rules for content editor to abide by, supports SEO optimisation etc
 - `from wagtail.models import Page`
 - `from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel`
+- `from wagtail.api import APIField` to get access to API view of `/page` endpoint
 - `from wagtail.fields import RichTextField`
-- `from wagtail.images.models import Image, AbstractImage, AbstractRendition` (in `images/models.py`)
+- `from wagtail.images.models import Image, AbstractImage, AbstractRendition` 
+  - create custom fields for image and custom renditions, see app `images/models.py`
 - `from wagtail.images import get_image_model`
-  - (a function() to use with `models.ForeignKey()` to get image instead of `"wagtailimages.Image"`)
+  - a function() to use with `models.ForeignKey()` to get image instead of `"wagtailimages.Image"`
 - `from wagtail.documents import get_document_model`
-  - (a function() to use with `models.ForeignKey()` to get document instead of `"wagtaildocuments.Document"`)
+  - a function() to use with `models.ForeignKey()` to get document instead of `"wagtaildocuments.Document"`
 - `from wagtail.images.views.serve import ServeView` (in `blog/urls.py`)
