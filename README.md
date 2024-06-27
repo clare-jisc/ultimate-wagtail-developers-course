@@ -82,6 +82,8 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 - [Wagtail documentation - How to use images in templates](https://docs.wagtail.org/en/stable/topics/images.html#image-tag)
 - [Wagtail documentation - Page model reference fields and methods](https://docs.wagtail.org/en/stable/reference/pages/model_reference.html#page)
 - [Wagtail documentation - Private pages, restricting who can view](https://docs.wagtail.org/en/stable/advanced_topics/privacy.html#private-pages)
+- [Wagtail Documentation - Wagtail API v2 configuration guide](https://docs.wagtail.org/en/stable/advanced_topics/api/v2/configuration.html#api-v2-configuration)
+
 
 ### List of useful wagtail imports
 
@@ -90,7 +92,8 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
   - used to apply custom validation to fields on a page, set specific rules for content editor to abide by, supports SEO optimisation etc
 - `from wagtail.models import Page`
 - `from wagtail.admin.panels import FieldPanel, MultiFieldPanel, HelpPanel`
-- `from wagtail.api import APIField` to get access to API view of `/page` endpoint
+- `from wagtail.api import APIField` 
+  - to get access to API view of `/page` endpoint
 - `from wagtail.fields import RichTextField`
 - `from wagtail.images.models import Image, AbstractImage, AbstractRendition` 
   - create custom fields for image and custom renditions, see app `images/models.py`
@@ -98,4 +101,9 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
   - a function() to use with `models.ForeignKey()` to get image instead of `"wagtailimages.Image"`
 - `from wagtail.documents import get_document_model`
   - a function() to use with `models.ForeignKey()` to get document instead of `"wagtaildocuments.Document"`
-- `from wagtail.images.views.serve import ServeView` (in `blog/urls.py`)
+- `from wagtail.images.views.serve import ServeView` 
+  - used in a complex url pattern in `blog/urls.py` to handle image requests
+- `from rest_framework.fields import Field` 
+  - create Serializer classes for each field you want to access in the API view
+- `from wagtail.templatetags.wagtailcore_tags import richtext`
+  - create a Serializer for richtext field if you want to access link href urls in the api view
