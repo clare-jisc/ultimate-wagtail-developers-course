@@ -106,4 +106,4 @@ click to go to [quick links to useful lessons](lessons/link_to_lessons.md#quick-
 - `from rest_framework.fields import Field` 
   - create Serializer classes for each field you want to access in the API view
 - `from wagtail.templatetags.wagtailcore_tags import richtext`
-  - create a Serializer for richtext field if you want to access link href urls in the api view
+  - create a Serializer for richtext field if you want to see link href urls in the API view
