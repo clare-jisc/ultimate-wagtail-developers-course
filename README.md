@@ -37,7 +37,7 @@ Create a wagtail framework for your website app, with the name you want it to ha
     - Password: `PITA-changeme`
     - Password (again): `PITA-changeme`
 - now check can login through wagtail UI interface
-- run `./manage.py runserver 0.0.0.:8003`
+- run `./manage.py runserver 0.0.0.0:8003`
 - in browser go to `localhost:8003/admin` and login
 
 ### Upgrade wagtail to latest version
