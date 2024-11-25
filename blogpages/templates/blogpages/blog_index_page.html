@@ -13,7 +13,7 @@
         <h3 class="text-2xl font-medium text-gray-600">BLOG POSTS ARE BELOW</h3>
         {% for blog_post in blogpages %}
             <a href="{{ blog_post.url }}"
-               class="text-blue-500 hover:text-blue-800 transition duration-200">{{ blog_post.title }}</a>
+                class="text-blue-500 hover:text-blue-800 transition duration-200">{{ blog_post.title }}</a>
             <p>{{ blog_post.subtitle }}</p>
             <hr>
         {% endfor %}
